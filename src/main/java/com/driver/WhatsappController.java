@@ -90,4 +90,14 @@ public class WhatsappController {
 
         return whatsappService.findMessage(start, end, K);
     }
+
+    @DeleteMapping("/delete-group")
+    public String deleteGroup(Group group, User user){
+        return whatsappService.deleteGroup(group, user);
+    }
+
+    @DeleteMapping("/delete-multiple-messages")
+    public String deleteMultipleMessages(Date start, Date end){
+        return whatsappService.deleteMultipleMessages(start, end);
+    }
 }
